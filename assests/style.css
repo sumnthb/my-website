@@ -1,0 +1,344 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  background: #f7f7f7;
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #ff7b7b, #ffb199);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin-left: 2rem;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background: #fff;
+  color: #ff7b7b;
+  border-radius: 4px;
+}
+
+/* Hero Section (Home) */
+.hero {
+  background: url('assets/images/hero-bg.jpg') center/cover no-repeat, 
+              linear-gradient(#ffffffaa, #ffffffaa);
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #ff7b7b;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-button:hover {
+  background: #ff5050;
+}
+
+/* About Section */
+.about {
+  padding: 4rem 5%;
+  background: #fff;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Featured Section */
+.featured {
+  padding: 4rem 5%;
+  background: linear-gradient(90deg, #ffb199, #ff7b7b);
+  color: #fff;
+  text-align: center;
+}
+
+.section-title h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+}
+
+.section-title p {
+  margin: 1rem 0 2rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  width: 300px;
+  padding: 2rem;
+  border-radius: 8px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Teaching Page Hero */
+.teaching-hero {
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.teaching-hero-content {
+  text-align: center;
+  color: #333;
+}
+
+.teaching-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* Courses Section */
+.courses {
+  padding: 3rem 5%;
+  background: #fff;
+  text-align: center;
+}
+
+.courses h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.course {
+  background: #f0f0f0;
+  width: 300px;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.course:hover {
+  transform: translateY(-5px);
+}
+
+.course h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #ff7b7b;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ff5050;
+}
+
+/* Workshops Section */
+.workshops {
+  background: #fafafa;
+  padding: 3rem 5%;
+  text-align: center;
+}
+
+.workshops h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Schedule Page Hero */
+.schedule-hero {
+  background: linear-gradient(135deg, #84fab0, #8fd3f4);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-hero-content {
+  text-align: center;
+  color: #333;
+}
+
+.schedule-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+}
+
+/* Schedule Table */
+.schedule-table-section {
+  padding: 3rem 5%;
+  background: #fff;
+  text-align: center;
+}
+
+.schedule-table {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.schedule-table thead {
+  background: #ff7b7b;
+  color: #fff;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 5%;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar ul li {
+    margin-left: 1rem;
+  }
+  .nav-brand {
+    font-size: 1.25rem;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .teaching-hero-content h1,
+  .schedule-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
