@@ -1,0 +1,30 @@
+name: Security Review
+
+# PR backstop for the /security-review Claude Code command (.claude/commands/security-review.md).
+# No-ops until a CLAUDE_API_KEY repo secret is added under Settings -> Secrets and variables ->
+# Actions; add one to enable it (needs both Claude API + Claude Code usage enabled on the key).
+
+on:
+  pull_request:
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    env:
+      CLAUDE_API_KEY: ${{ secrets.CLAUDE_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 2
+
+      - name: Claude Code Security Review
+        if: ${{ env.CLAUDE_API_KEY != '' }}
+        uses: anthropics/claude-code-security-review@main
+        with:
+          comment-pr: true
+          claude-api-key: ${{ secrets.CLAUDE_API_KEY }}
